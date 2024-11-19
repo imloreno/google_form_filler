@@ -1,0 +1,141 @@
+{
+   "page1": [
+      {
+         "label": "Género",
+         "type": "radio",
+         "options": [
+            {
+               "identifier": "#i6",
+               "odds": [
+                  0,
+                  5
+               ]
+            },
+            {
+               "identifier": "#i6",
+               "odds": [
+                  51,
+                  1
+               ]
+            }
+         ]
+      },
+      {
+         "label": "Profesión Actual",
+         "type": "text",
+         "identifier": "#000",
+         "options": [
+            {
+               "odds": [
+                  0,
+                  50
+               ],
+               "labels": [
+                  "Ingeniero de Software",
+                  "Desarrollador Backend",
+                  "Desarrollador Frontend",
+                  "Desarrollador Full Stack",
+                  "Científico de Datos",
+                  "Analista de Datos",
+                  "Arquitecto de la Nube",
+                  "Analista de Ciberseguridad",
+                  "Software Engineer",
+                  "Backend Developer",
+                  "Frontend Developer",
+                  "Full Stack Developer",
+                  "Data Scientist",
+                  "Data Analyst",
+                  "Machine Learning Engineer",
+                  "Cloud Architect",
+                  "DevOps Engineer",
+                  "Cybersecurity Analyst",
+                  "UI/UX Designer",
+                  "Product Designer"
+               ]
+            },
+            {
+               "odds": [
+                  51,
+                  85
+               ],
+               "labels": [
+                  "Product Manager",
+                  "Web Developer",
+                  "Mobile App Developer",
+                  "Search Engine Optimization Specialist",
+                  "Digital Marketing Manager",
+                  "Social Media Manager",
+                  "Copywriter",
+                  "Performance Marketing Specialist",
+                  "PPC Specialist",
+                  "Diseñador UI/UX",
+                  "Manager de Producto",
+                  "Desarrollador de Aplicaciones Móviles",
+                  "Especialista en SEO"
+               ]
+            },
+            {
+               "odds": [
+                  86,
+                  1
+               ],
+               "labels": [
+                  "Email Marketing Specialist",
+                  "Affiliate Marketing Manager",
+                  "E-commerce Manager",
+                  "Game Developer",
+                  "IT Project Manager",
+                  "Technical Support Specialist",
+                  "Marketing Digital",
+                  "Desarrollador de Videojuegos",
+                  "Especialista en Soporte Técnico"
+               ]
+            }
+         ]
+      },
+      {
+         "label": "Residencia Actual",
+         "type": "text",
+         "identifier": "#000",
+         "options": [
+            {
+               "odds": [
+                  0,
+                  35
+               ],
+               "labels": [
+                  "Santa Cruz"
+               ]
+            },
+            {
+               "odds": [
+                  36,
+                  80
+               ],
+               "labels": [
+                  "Cochabamba"
+               ]
+            },
+            {
+               "odds": [
+                  81,
+                  91
+               ],
+               "labels": [
+                  "La Paz"
+               ]
+            },
+            {
+               "odds": [
+                  92,
+                  1
+               ],
+               "labels": [
+                  "Chuquisaca"
+               ]
+            }
+         ]
+      }
+   ],
+   "page2": []
+}
