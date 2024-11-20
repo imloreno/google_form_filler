@@ -1,34 +1,65 @@
+const { delay } = require("lodash");
 const { chromium } = require("playwright");
+require("dotenv").config();
 
-export class GoogleForm {
+class GoogleForm {
   formLink;
+  headless = process.env.PWDEBUG !== "1";
   page;
+  browser;
 
   constructor(formLink) {
     this.formLink = formLink;
+    this.headless = process.env.PWDEBUG !== "1";
+    this.browser = null; // Store the browser instance
+    this.page = null; // Store the page instance
   }
 
   // Tabs and page management
   openPage = async () => {
-    const browser = await chromium.launch({ headless: false });
-    page = await browser.newPage();
+    this.browser = await chromium.launch({
+      headless: this.headless,
+      slowMo: 100,
+    });
+    this.page = await this.browser.newPage();
   };
   closePage = async () => {
-    await page.close();
+    if (this.page) await this.page.close();
+    if (this.browser) await this.browser.close(); // Close the browser properly
   };
   goToForm = async () => {
-    await page.goto(this.formLink);
+    await this.page.goto(this.formLink);
   };
   waitForTimeout = async (time) => {
-    await page.waitForTimeout(time);
+    await this.page.waitForTimeout(time);
+  };
+  waitForPageIsLoaded = async () => {
+    await this.page.waitForLoadState("load");
+  };
+  scrollToElement = async (identifier) => {
+    const elementHandle = await this.page.$(identifier); // Get the element handle
+    if (!elementHandle) throw new Error(`Element not found: ${identifier}`);
+
+    // Scroll the element into view and center it
+    await elementHandle.evaluate((el) => {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    });
   };
 
   // Form filling
-  clickOnInput = async (identifier) => {
-    await page.click(identifier);
+  click = async (identifier) => {
+    console.log(`Clicking on input [ ${identifier} ]`);
+    this.scrollToElement(identifier);
+    await this.page.click(identifier);
   };
   fillInput = async (identifier, value) => {
-    await page.fill(identifier, value);
+    console.log(`Filling input [ ${identifier} ] with value ${value}`);
+    this.scrollToElement(identifier);
+    await this.page.type(identifier, value, { delay: 30 });
   };
 
   // Getters and setters
@@ -39,3 +70,5 @@ export class GoogleForm {
     this.formLink = formLink;
   };
 }
+
+exports.GoogleForm = GoogleForm;

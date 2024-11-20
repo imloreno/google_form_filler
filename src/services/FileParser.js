@@ -1,8 +1,7 @@
 const fs = require("fs");
 
-export class FileParser {
+class FileParser {
   path;
-  content;
   constructor(path) {
     this.path = path;
   }
@@ -12,8 +11,14 @@ export class FileParser {
     return JSON.parse(this.#readFile());
   }
   #readFile() {
-    const content = fs.readFileSync(this.path).toString();
-    this.content = content;
+    let data;
+    try {
+      data = fs.readFileSync(this.path, "utf8");
+    } catch (err) {
+      console.error(err);
+    }
+
+    return data;
   }
 
   // ----------------------------------- Getters and setters
@@ -24,3 +29,5 @@ export class FileParser {
     this.path = path;
   };
 }
+
+exports.FileParser = FileParser;

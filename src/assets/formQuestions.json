@@ -1,5 +1,5 @@
-{
-   "page1": [
+[
+   [
       {
          "label": "Género",
          "type": "radio",
@@ -8,14 +8,14 @@
                "identifier": "#i6",
                "odds": [
                   0,
-                  5
+                  50
                ]
             },
             {
                "identifier": "#i6",
                "odds": [
                   51,
-                  1
+                  100
                ]
             }
          ]
@@ -77,7 +77,7 @@
             {
                "odds": [
                   86,
-                  1
+                  100
                ],
                "labels": [
                   "Email Marketing Specialist",
@@ -128,7 +128,7 @@
             {
                "odds": [
                   92,
-                  1
+                  100
                ],
                "labels": [
                   "Chuquisaca"
@@ -136,6 +136,5 @@
             }
          ]
       }
-   ],
-   "page2": []
-}
+   ]
+]
