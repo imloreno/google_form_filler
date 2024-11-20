@@ -15,6 +15,7 @@ class QuestionService {
     const nextPage = this.pages[this.pageSelected + 1];
     // In case there are no more pages, we return null
     if (!nextPage) {
+      this.resetPageSelected();
       return null;
     }
     this.pageSelected++;
@@ -39,9 +40,8 @@ class QuestionService {
   };
 
   // ----------------------------------- Getters and setters
-  resetPages = () => {
-    pageSelected = 0;
-    this.pages = [];
+  resetPageSelected = () => {
+    this.pageSelected = 0;
   };
   setPages = (pages) => {
     this.pages = pages;

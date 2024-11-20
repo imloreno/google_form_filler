@@ -1,198 +1,201 @@
-[
-   [
-      {
-         "label": "Pregunta 1",
-         "type": "radio",
-         "options": [
-            {
-               "identifier": "div#i6.Od2TWd.hYsg7c",
-               "odds": [
-                  0,
-                  90
-               ]
-            },
-            {
-               "identifier": "div#i9.Od2TWd.hYsg7c",
-               "odds": [
-                  91,
-                  100
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Pregunta 2",
-         "type": "text",
-         "identifier": "input[aria-labelledby='i15 i18']",
-         "options": [
-            {
-               "odds": [
-                  0,
-                  50
-               ],
-               "labels": [
-                  "Texto de prueba 1 - (probabilidad = 50%)",
-                  "Texto de prueba 2 - (probabilidad = 50%)",
-                  "Texto de prueba 3 - (probabilidad = 50%)",
-                  "Texto de prueba 4 - (probabilidad = 50%)",
-                  "Texto de prueba 5 - (probabilidad = 50%)"
-               ]
-            },
-            {
-               "odds": [
-                  51,
-                  100
-               ],
-               "labels": [
-                  "Test text 1 - (probability = 50%)",
-                  "Test text 2 - (probability = 50%)",
-                  "Test text 3 - (probability = 50%)",
-                  "Test text 4 - (probability = 50%)",
-                  "Test text 5 - (probability = 50%)"
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Pregunta 3",
-         "type": "text",
-         "identifier": "textarea[aria-labelledby='i20 i23']",
-         "options": [
-            {
-               "odds": [
-                  0,
-                  90
-               ],
-               "labels": [
-                  "Texto de prueba 1 - (probabilidad = 90%)",
-                  "Texto de prueba 2 - (probabilidad = 90%)",
-                  "Texto de prueba 3 - (probabilidad = 90%)",
-                  "Texto de prueba 4 - (probabilidad = 90%)",
-                  "Texto de prueba 5 - (probabilidad = 90%)"
-               ]
-            },
-            {
-               "odds": [
-                  91,
-                  100
-               ],
-               "labels": [
-                  "Test text 1 - (probability = 10%)",
-                  "Test text 2 - (probability = 10%)",
-                  "Test text 3 - (probability = 10%)",
-                  "Test text 4 - (probability = 10%)",
-                  "Test text 5 - (probability = 10%)"
-               ]
-            }
-         ]
-      }
-   ],
-   [
-      {
-         "label": "Pregunta 3",
-         "type": "radio",
-         "options": [
-            {
-               "identifier": "div#i6.Od2TWd.hYsg7c",
-               "odds": [
-                  0,
-                  20
-               ]
-            },
-            {
-               "identifier": "div#i9.Od2TWd.hYsg7c",
-               "odds": [
-                  21,
-                  100
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Pregunta 4",
-         "type": "text",
-         "identifier": "input[aria-labelledby='i15 i18']",
-         "options": [
-            {
-               "odds": [
-                  0,
-                  30
-               ],
-               "labels": [
-                  "Texto de prueba 1 - (probability = 30%)",
-                  "Texto de prueba 2 - (probability = 30%)",
-                  "Texto de prueba 3 - (probability = 30%)",
-                  "Texto de prueba 4 - (probability = 30%)",
-                  "Texto de prueba 5 - (probability = 30%)"
-               ]
-            },
-            {
-               "odds": [
-                  31,
-                  100
-               ],
-               "labels": [
-                  "Test text 1 - (probability = 70%)",
-                  "Test text 2 - (probability = 70%)",
-                  "Test text 3 - (probability = 70%)",
-                  "Test text 4 - (probability = 70%)",
-                  "Test text 5 - (probability = 70%)"
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Pregunta 5",
-         "type": "radio",
-         "options": [
-            {
-               "identifier": "div#i25.Od2TWd.hYsg7c",
-               "odds": [
-                  0,
-                  20
-               ]
-            },
-            {
-               "identifier": "div#i28.Od2TWd.hYsg7c",
-               "odds": [
-                  21,
-                  100
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Pregunta final",
-         "type": "text",
-         "identifier": "input[aria-labelledby='i31 i34']",
-         "options": [
-            {
-               "odds": [
-                  0,
-                  30
-               ],
-               "labels": [
-                  "Texto de prueba 1 - (probabilidad = 30%)",
-                  "Texto de prueba 2 - (probabilidad = 30%)",
-                  "Texto de prueba 3 - (probabilidad = 30%)",
-                  "Texto de prueba 4 - (probabilidad = 30%)",
-                  "Texto de prueba 5 - (probabilidad = 30%)"
-               ]
-            },
-            {
-               "odds": [
-                  31,
-                  100
-               ],
-               "labels": [
-                  "Test text 1 - (probabilidad = 70%)",
-                  "Test text 2 - (probabilidad = 70%)",
-                  "Test text 3 - (probabilidad = 70%)",
-                  "Test text 4 - (probabilidad = 70%)",
-                  "Test text 5 - (probabilidad = 70%)"
-               ]
-            }
-         ]
-      }
+{
+   "loop": 10,
+   "pages": [
+      [
+         {
+            "label": "Pregunta 1",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i6.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     90
+                  ]
+               },
+               {
+                  "identifier": "div#i9.Od2TWd.hYsg7c",
+                  "odds": [
+                     91,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Pregunta 2",
+            "type": "text",
+            "identifier": "input[aria-labelledby='i15 i18']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     50
+                  ],
+                  "labels": [
+                     "Texto de prueba 1 - (probabilidad = 50%)",
+                     "Texto de prueba 2 - (probabilidad = 50%)",
+                     "Texto de prueba 3 - (probabilidad = 50%)",
+                     "Texto de prueba 4 - (probabilidad = 50%)",
+                     "Texto de prueba 5 - (probabilidad = 50%)"
+                  ]
+               },
+               {
+                  "odds": [
+                     51,
+                     100
+                  ],
+                  "labels": [
+                     "Test text 1 - (probability = 50%)",
+                     "Test text 2 - (probability = 50%)",
+                     "Test text 3 - (probability = 50%)",
+                     "Test text 4 - (probability = 50%)",
+                     "Test text 5 - (probability = 50%)"
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Pregunta 3",
+            "type": "text",
+            "identifier": "textarea[aria-labelledby='i20 i23']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     90
+                  ],
+                  "labels": [
+                     "Texto de prueba 1 - (probabilidad = 90%)",
+                     "Texto de prueba 2 - (probabilidad = 90%)",
+                     "Texto de prueba 3 - (probabilidad = 90%)",
+                     "Texto de prueba 4 - (probabilidad = 90%)",
+                     "Texto de prueba 5 - (probabilidad = 90%)"
+                  ]
+               },
+               {
+                  "odds": [
+                     91,
+                     100
+                  ],
+                  "labels": [
+                     "Test text 1 - (probability = 10%)",
+                     "Test text 2 - (probability = 10%)",
+                     "Test text 3 - (probability = 10%)",
+                     "Test text 4 - (probability = 10%)",
+                     "Test text 5 - (probability = 10%)"
+                  ]
+               }
+            ]
+         }
+      ],
+      [
+         {
+            "label": "Pregunta 3",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i6.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     20
+                  ]
+               },
+               {
+                  "identifier": "div#i9.Od2TWd.hYsg7c",
+                  "odds": [
+                     21,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Pregunta 4",
+            "type": "text",
+            "identifier": "input[aria-labelledby='i15 i18']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     30
+                  ],
+                  "labels": [
+                     "Texto de prueba 1 - (probability = 30%)",
+                     "Texto de prueba 2 - (probability = 30%)",
+                     "Texto de prueba 3 - (probability = 30%)",
+                     "Texto de prueba 4 - (probability = 30%)",
+                     "Texto de prueba 5 - (probability = 30%)"
+                  ]
+               },
+               {
+                  "odds": [
+                     31,
+                     100
+                  ],
+                  "labels": [
+                     "Test text 1 - (probability = 70%)",
+                     "Test text 2 - (probability = 70%)",
+                     "Test text 3 - (probability = 70%)",
+                     "Test text 4 - (probability = 70%)",
+                     "Test text 5 - (probability = 70%)"
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Pregunta 5",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i25.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     20
+                  ]
+               },
+               {
+                  "identifier": "div#i28.Od2TWd.hYsg7c",
+                  "odds": [
+                     21,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Pregunta final",
+            "type": "text",
+            "identifier": "input[aria-labelledby='i31 i34']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     30
+                  ],
+                  "labels": [
+                     "Texto de prueba 1 - (probabilidad = 30%)",
+                     "Texto de prueba 2 - (probabilidad = 30%)",
+                     "Texto de prueba 3 - (probabilidad = 30%)",
+                     "Texto de prueba 4 - (probabilidad = 30%)",
+                     "Texto de prueba 5 - (probabilidad = 30%)"
+                  ]
+               },
+               {
+                  "odds": [
+                     31,
+                     100
+                  ],
+                  "labels": [
+                     "Test text 1 - (probabilidad = 70%)",
+                     "Test text 2 - (probabilidad = 70%)",
+                     "Test text 3 - (probabilidad = 70%)",
+                     "Test text 4 - (probabilidad = 70%)",
+                     "Test text 5 - (probabilidad = 70%)"
+                  ]
+               }
+            ]
+         }
+      ]
    ]
-]
+}

@@ -1,62 +1,47 @@
-const { FileParser } = require("./src/services/FileParser");
-const { NavigatorService } = require("./src/services/NavigatorService");
-const { QuestionService } = require("./src/services/QuestionService");
+const {
+  isMainThread,
+  Worker,
+  parentPort,
+  workerData,
+} = require("worker_threads");
+const { GoogleFormService } = require("./src/services/GoogleFormService");
+require("dotenv").config();
 
-const main = async () => {
-  // Configuration variables
-  const formLink = "https://forms.gle/5JuGBYZzYkWhe7vG9";
-  const filePath =
-    "E:/Programming/nodejs/tests/google_form_filler/src/assets/formTest.json";
+if (isMainThread) {
+  // Main thread: Distribute work across multiple threads
+  const numThreads = process.env.THREADS || 1; // Adjust based on your system's cores
+  const tasks = Array.from({ length: numThreads }, (_, i) => i); // Dummy task data
 
-  // Variables
-  let questionPages;
-
-  // Parse the questions from the file
-  const fileParser = new FileParser(filePath);
-  questionPages = fileParser.parseFileContent();
-
-  // Process the questions
-  const questionService = new QuestionService(questionPages);
-
-  // Open the form
-  const navigatorService = new NavigatorService(formLink);
-  await navigatorService.openPage();
-  await navigatorService.goToPage();
-  await navigatorService.waitForPageIsLoaded();
-  await navigatorService.waitForTimeout(100);
-
-  // Loop through the pages and interact with the form
-  for (let i = 0; i < questionService.getPages().length; i++) {
-    // Filling each questions
-    for (const question of questionService.getCurrentQuestions()) {
-      let answer = question.processAnswer();
-      switch (question.getType()) {
-        case "radio":
-          await navigatorService.click(answer.identifier);
-          break;
-        case "text":
-          await navigatorService.fillInput(answer.identifier, answer.value);
-          break;
-        default:
-          console.log("Invalid question type");
-          break;
-      }
-      await navigatorService.waitForTimeout(500);
-    }
-
-    //Set the next page
-    if (questionService.nextPage()) {
-      await navigatorService.click("span.l4V7wb.Fxmcue >> text=Siguiente");
-      await navigatorService.waitForTimeout(1000);
-      console.log("Going to the next page");
-    } else {
-      await navigatorService.click("span.l4V7wb.Fxmcue >> text=Enviar");
-      await navigatorService.waitForTimeout(1000);
-      await navigatorService.closePage();
-      console.log("Finished filling the form");
-      break;
-    }
+  for (const task of tasks) {
+    const worker = new Worker(__filename, { workerData: task });
+    worker.on("message", (msg) => console.log(`Worker ${task}:`, msg));
+    worker.on("error", (err) => console.error(`Worker ${task} Error:`, err));
+    worker.on("exit", (code) => {
+      if (code !== 0) console.error(`Worker ${task} exited with code ${code}`);
+    });
   }
-};
+} else {
+  (async () => {
+    // Configuration variables
+    const formLink = "https://forms.gle/DiLrov3NLC8uDK5J7";
+    // const formLink = "https://forms.gle/5JuGBYZzYkWhe7vG9";
+    const filePath =
+      "E:/Programming/nodejs/tests/google_form_filler/src/assets/formQuestions.json";
+    // "E:/Programming/nodejs/tests/google_form_filler/src/assets/formTest.json";
 
-main();
+    // Google form service
+    const googleFormService = new GoogleFormService(formLink, filePath);
+    await googleFormService.prepareNavigator();
+
+    // Start the form filling process
+    for (let i = 0; i < googleFormService.getIterations(); i++) {
+      await googleFormService.formFillingProcessor();
+    }
+    await googleFormService.closeNavigator();
+
+    parentPort.postMessage(`Worker ${workerData}: Task Complete`);
+    await console.log(
+      `[][][][][][][][]:        Worker ${workerData}: Task Complete`
+    );
+  })();
+}

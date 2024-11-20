@@ -1,140 +1,673 @@
-[
-   [
-      {
-         "label": "Género",
-         "type": "radio",
-         "options": [
-            {
-               "identifier": "#i6",
-               "odds": [
-                  0,
-                  50
-               ]
-            },
-            {
-               "identifier": "#i6",
-               "odds": [
-                  51,
-                  100
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Profesión Actual",
-         "type": "text",
-         "identifier": "#000",
-         "options": [
-            {
-               "odds": [
-                  0,
-                  50
-               ],
-               "labels": [
-                  "Ingeniero de Software",
-                  "Desarrollador Backend",
-                  "Desarrollador Frontend",
-                  "Desarrollador Full Stack",
-                  "Científico de Datos",
-                  "Analista de Datos",
-                  "Arquitecto de la Nube",
-                  "Analista de Ciberseguridad",
-                  "Software Engineer",
-                  "Backend Developer",
-                  "Frontend Developer",
-                  "Full Stack Developer",
-                  "Data Scientist",
-                  "Data Analyst",
-                  "Machine Learning Engineer",
-                  "Cloud Architect",
-                  "DevOps Engineer",
-                  "Cybersecurity Analyst",
-                  "UI/UX Designer",
-                  "Product Designer"
-               ]
-            },
-            {
-               "odds": [
-                  51,
-                  85
-               ],
-               "labels": [
-                  "Product Manager",
-                  "Web Developer",
-                  "Mobile App Developer",
-                  "Search Engine Optimization Specialist",
-                  "Digital Marketing Manager",
-                  "Social Media Manager",
-                  "Copywriter",
-                  "Performance Marketing Specialist",
-                  "PPC Specialist",
-                  "Diseñador UI/UX",
-                  "Manager de Producto",
-                  "Desarrollador de Aplicaciones Móviles",
-                  "Especialista en SEO"
-               ]
-            },
-            {
-               "odds": [
-                  86,
-                  100
-               ],
-               "labels": [
-                  "Email Marketing Specialist",
-                  "Affiliate Marketing Manager",
-                  "E-commerce Manager",
-                  "Game Developer",
-                  "IT Project Manager",
-                  "Technical Support Specialist",
-                  "Marketing Digital",
-                  "Desarrollador de Videojuegos",
-                  "Especialista en Soporte Técnico"
-               ]
-            }
-         ]
-      },
-      {
-         "label": "Residencia Actual",
-         "type": "text",
-         "identifier": "#000",
-         "options": [
-            {
-               "odds": [
-                  0,
-                  35
-               ],
-               "labels": [
-                  "Santa Cruz"
-               ]
-            },
-            {
-               "odds": [
-                  36,
-                  80
-               ],
-               "labels": [
-                  "Cochabamba"
-               ]
-            },
-            {
-               "odds": [
-                  81,
-                  91
-               ],
-               "labels": [
-                  "La Paz"
-               ]
-            },
-            {
-               "odds": [
-                  92,
-                  100
-               ],
-               "labels": [
-                  "Chuquisaca"
-               ]
-            }
-         ]
-      }
+{
+   "loop": 4,
+   "pages": [
+      [
+         {
+            "label": "Género",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "#i6",
+                  "odds": [
+                     0,
+                     70
+                  ]
+               },
+               {
+                  "identifier": "#i9",
+                  "odds": [
+                     71,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Profesión Actual",
+            "type": "text",
+            "identifier": "input[aria-labelledby='i12 i15']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     50
+                  ],
+                  "labels": [
+                     "Ingeniero de Software",
+                     "Desarrollador Backend",
+                     "Desarrollador Frontend",
+                     "Desarrollador Full Stack",
+                     "Científico de Datos",
+                     "Analista de Datos",
+                     "Arquitecto de la Nube",
+                     "Analista de Ciberseguridad",
+                     "Software Engineer",
+                     "Backend Developer",
+                     "Frontend Developer",
+                     "Full Stack Developer",
+                     "Data Scientist",
+                     "Data Analyst",
+                     "Machine Learning Engineer",
+                     "Cloud Architect",
+                     "DevOps Engineer",
+                     "Cybersecurity Analyst",
+                     "UI/UX Designer",
+                     "Product Designer"
+                  ]
+               },
+               {
+                  "odds": [
+                     51,
+                     85
+                  ],
+                  "labels": [
+                     "Product Manager",
+                     "Web Developer",
+                     "Mobile App Developer",
+                     "Search Engine Optimization Specialist",
+                     "Digital Marketing Manager",
+                     "Social Media Manager",
+                     "Copywriter",
+                     "Performance Marketing Specialist",
+                     "PPC Specialist",
+                     "Diseñador UI/UX",
+                     "Manager de Producto",
+                     "Desarrollador de Aplicaciones Móviles",
+                     "Especialista en SEO"
+                  ]
+               },
+               {
+                  "odds": [
+                     86,
+                     100
+                  ],
+                  "labels": [
+                     "Email Marketing Specialist",
+                     "Affiliate Marketing Manager",
+                     "E-commerce Manager",
+                     "Game Developer",
+                     "IT Project Manager",
+                     "Technical Support Specialist",
+                     "Marketing Digital",
+                     "Desarrollador de Videojuegos",
+                     "Especialista en Soporte Técnico"
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "Residencia Actual",
+            "type": "text",
+            "identifier": "input[aria-labelledby='i17 i20']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     35
+                  ],
+                  "labels": [
+                     "Santa Cruz"
+                  ]
+               },
+               {
+                  "odds": [
+                     36,
+                     80
+                  ],
+                  "labels": [
+                     "Cochabamba"
+                  ]
+               },
+               {
+                  "odds": [
+                     81,
+                     91
+                  ],
+                  "labels": [
+                     "La Paz"
+                  ]
+               },
+               {
+                  "odds": [
+                     92,
+                     100
+                  ],
+                  "labels": [
+                     "Chuquisaca"
+                  ]
+               }
+            ]
+         }
+      ],
+      [
+         {
+            "label": "¿Actualmente estás en búsqueda activa de empleo digital?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i6.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     88
+                  ]
+               },
+               {
+                  "identifier": "div#i9.Od2TWd.hYsg7c",
+                  "odds": [
+                     89,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Eres profesional o estas adquiriendo conocimientos para trabajar en mercados digitales?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i17.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     92
+                  ]
+               },
+               {
+                  "identifier": "div#i20.Od2TWd.hYsg7c",
+                  "odds": [
+                     93,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Cuántos currículums diferentes has enviado en los últimos 6 meses?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i28.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     40
+                  ]
+               },
+               {
+                  "identifier": "div#i31.Od2TWd.hYsg7c",
+                  "odds": [
+                     41,
+                     70
+                  ]
+               },
+               {
+                  "identifier": "div#i34.Od2TWd.hYsg7c",
+                  "odds": [
+                     71,
+                     95
+                  ]
+               },
+               {
+                  "identifier": "div#i37.Od2TWd.hYsg7c",
+                  "odds": [
+                     96,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Con qué frecuencia necesitas adaptar tus currículums para cumplir con los criterios específicos de una oferta laboral?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i45.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     30
+                  ]
+               },
+               {
+                  "identifier": "div#i48.Od2TWd.hYsg7c",
+                  "odds": [
+                     31,
+                     60
+                  ]
+               },
+               {
+                  "identifier": "div#i51.Od2TWd.hYsg7c",
+                  "odds": [
+                     61,
+                     95
+                  ]
+               },
+               {
+                  "identifier": "div#i54.Od2TWd.hYsg7c",
+                  "odds": [
+                     96,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Consideras que automatizar la generación personalizada de tu currículum para cada oferta de empleo aumenta tus posibilidades de éxito?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i62.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     50
+                  ]
+               },
+               {
+                  "identifier": "div#i65.Od2TWd.hYsg7c",
+                  "odds": [
+                     51,
+                     70
+                  ]
+               },
+               {
+                  "identifier": "div#i68.Od2TWd.hYsg7c",
+                  "odds": [
+                     71,
+                     77
+                  ]
+               },
+               {
+                  "identifier": "div#i71.Od2TWd.hYsg7c",
+                  "odds": [
+                     78,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Cuánto tiempo dedicas, en promedio, a actualizar y redactar tu currículum?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i79.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     15
+                  ]
+               },
+               {
+                  "identifier": "div#i82.Od2TWd.hYsg7c",
+                  "odds": [
+                     16,
+                     60
+                  ]
+               },
+               {
+                  "identifier": "div#i85.Od2TWd.hYsg7c",
+                  "odds": [
+                     61,
+                     87
+                  ]
+               },
+               {
+                  "identifier": "div#i88.Od2TWd.hYsg7c",
+                  "odds": [
+                     88,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Considerarías útil una herramienta que personalice tu currículum automáticamente según la oferta de empleo?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i96.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     70
+                  ]
+               },
+               {
+                  "identifier": "div#i99.Od2TWd.hYsg7c",
+                  "odds": [
+                     71,
+                     95
+                  ]
+               },
+               {
+                  "identifier": "div#i102.Od2TWd.hYsg7c",
+                  "odds": [
+                     96,
+                     99.8
+                  ]
+               },
+               {
+                  "identifier": "div#i105.Od2TWd.hYsg7c",
+                  "odds": [
+                     99.9,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": " ¿Cuán importante crees que es adaptar tu currículum a los requisitos específicos de cada oferta de empleo?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i113.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     50
+                  ]
+               },
+               {
+                  "identifier": "div#i116.Od2TWd.hYsg7c",
+                  "odds": [
+                     51,
+                     87
+                  ]
+               },
+               {
+                  "identifier": "div#i119.Od2TWd.hYsg7c",
+                  "odds": [
+                     88,
+                     99.8
+                  ]
+               },
+               {
+                  "identifier": "div#i122.Od2TWd.hYsg7c",
+                  "odds": [
+                     99.9,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Qué tan relevante crees que sería una herramienta que genere currículums personalizados y optimizados para los sistemas de selección automatizados (ATS) usados por empresas?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i130.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     39
+                  ]
+               },
+               {
+                  "identifier": "div#i133.Od2TWd.hYsg7c",
+                  "odds": [
+                     40,
+                     89
+                  ]
+               },
+               {
+                  "identifier": "div#i136.Od2TWd.hYsg7c",
+                  "odds": [
+                     90,
+                     98
+                  ]
+               },
+               {
+                  "identifier": "div#i139.Od2TWd.hYsg7c",
+                  "odds": [
+                     99,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Estarías dispuesto a pagar por una herramienta que genere currículums personalizados y optimizados para los sistemas de selección automatizados (ATS) usados por empresas?",
+            "type": "radio",
+            "options": [
+               {
+                  "identifier": "div#i147.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     90
+                  ]
+               },
+               {
+                  "identifier": "div#i150.Od2TWd.hYsg7c",
+                  "odds": [
+                     91,
+                     100
+                  ]
+               },
+               {
+                  "identifier": "div#i53.Od2TWd.hYsg7c",
+                  "odds": [
+                     0,
+                     90
+                  ]
+               },
+               {
+                  "identifier": "div#i156.Od2TWd.hYsg7c",
+                  "odds": [
+                     91,
+                     100
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Qué dificultades encuentras al momento de actualizar tu currículum para cada oferta de empleo?",
+            "type": "text",
+            "identifier": "textarea[aria-labelledby='i159 i162']",
+            "randomizeAnswers": false,
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     100
+                  ],
+                  "labels": [
+                     "Falta de tiempo para adaptarlo correctamente",
+                     "No sé que cambiar para hacerlo relevante",
+                     "Es complicado encontrar las palabras correctas",
+                     "No entiendo bien los requisitos de la oferta",
+                     "Me cuesta identificar las palabras clave necesarias",
+                     "No tengo una plantilla adaptable",
+                     "Me resulta tedioso hacerlo una y otra vez",
+                     "A veces no se cómo estructurarlo bien",
+                     "",
+                     "No sé cómo optimizarlo para sistemas ATS",
+                     "Falta de herramientas adecuadas para personalizarlo",
+                     "",
+                     "Me cuesta resumir mis experiencias correctamente",
+                     "No se si debo incluir todo o sólo lo relevante",
+                     "A veces hago errores al escribir bajo presión",
+                     "",
+                     "No sé si mi formato es el correcto",
+                     "Siento que mi currículum siempre parece igual",
+                     "",
+                     "",
+                     "",
+                     "No tengo claros mis objetivos profesionales",
+                     "Actualizarlo me parece innecesario a veces",
+                     "Me frustro buscando ejemplos en internet",
+                     "Es complicado mantenerlo actualizado constantemente",
+                     "No tengo confianza en lo que estoy escribiendo",
+                     "",
+                     "Los formatos que uso no siempre son aceptados",
+                     "Siento que no estoy usando bien las palabras clave",
+                     "",
+                     "A veces olvido mencionar proyectos importantes",
+                     "No entiendo cómo hacer énfasis en mis habilidades",
+                     "Es difícil decidir qué experiencias omitir",
+                     "Siempre me falta espacio para agregar todo lo relevante",
+                     "No sé cómo explicar ciertos logros claramente",
+                     "El diseño siempre me queda desordenado",
+                     "No estoy seguro de cómo organizar mis datos personales",
+                     "Es confuso saber si el currículum debe ser largo o corto",
+                     "",
+                     "Siempre termino incluyendo demasiada información",
+                     "No tengo un diseño profesional para utilizar",
+                     "Es complicado destacar sobre otros postulantes",
+                     "La edición en PDF es bastante tediosa",
+                     "Mis habilidades parecen repetitivas cada vez que lo actualizo",
+                     "",
+                     "Siempre siento que falta algo importante",
+                     "",
+                     "No sé si incluir todas mis certificaciones",
+                     "",
+                     "A veces las plataformas no aceptan ciertos formatos",
+                     "No tengo tiempo para verificar errores ortográficos",
+                     "Las herramientas online no siempre son intuitivas",
+                     "",
+                     "Nunca sé si la experiencia debe ir en orden cronológico",
+                     "Los encabezados me quedan desordenados al editar",
+                     "A veces tardo demasiado en hacer pequeños cambios",
+                     "Siempre siento que no estoy destacando lo suficiente",
+                     "No encuentro un balance entre contenido visual y textual",
+                     "Los diseños prefabricados no son muy flexibles",
+                     "Nunca sé cómo adaptar el currículum a la oferta exacta",
+                     "Actualizar cada detalle toma mucho más tiempo del esperado",
+                     "Me confundo con los requerimientos específicos de los empleadores",
+                     "",
+                     "No sé cómo conectar mis habilidades con la oferta",
+                     "Hacerlo en diferentes idiomas es un gran reto",
+                     "Me falta inspiración para describir mis experiencias",
+                     "Es difícil encontrar el tono correcto en la redacción",
+                     "No sé si debo usar puntos o párrafos largos",
+                     "",
+                     "No estoy seguro si los datos personales son necesarios",
+                     "A veces siento que mi experiencia no es suficiente",
+                     "Siempre tengo dudas sobre qué logros incluir",
+                     "",
+                     "Nunca estoy seguro de si debo incluir referencias",
+                     "Es complicado mantener un diseño limpio y profesional",
+                     "Las plataformas no siempre soportan todos los formatos",
+                     "",
+                     "A veces no sé cómo destacar mi educación académica",
+                     "Las palabras clave que incluyo parecen irrelevantes",
+                     "Siento que mi currículum no está a la altura de otros candidatos",
+                     "La experiencia profesional me queda muy breve",
+                     "Es complicado ajustar el diseño a diferentes plataformas",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "Siempre tardo en decidir qué diseño utilizar",
+                     "No sé cómo incluir trabajo voluntario en el currículum",
+                     "Siento que mis habilidades técnicas son muy básicas",
+                     "",
+                     "Es complicado hablar sobre mis fortalezas sin sonar arrogante",
+                     "Siempre termino enviando un currículum genérico por falta de tiempo"
+                  ]
+               }
+            ]
+         },
+         {
+            "label": "¿Qué funcionalidades adicionales te gustaría ver en una herramienta que automatice la personalización de currículums?",
+            "type": "text",
+            "identifier": "textarea[aria-labelledby='i164 i167']",
+            "options": [
+               {
+                  "odds": [
+                     0,
+                     100
+                  ],
+                  "labels": [
+                     "Sugerencias de palabras clave para sistemas ATS",
+                     "Opciones para traducir mi currículum a otros idiomas",
+                     "Análisis de las ofertas de empleo para destacar mis habilidades relevantes",
+                     "",
+                     "",
+                     "Generación automática de cartas de presentación",
+                     "",
+                     "Plantillas profesionales adaptadas a diferentes industrias",
+                     "",
+                     "Consejos para mejorar mi experiencia laboral",
+                     "Revisión de errores ortográficos en tiempo real",
+                     "",
+                     "",
+                     "",
+                     "Un sistema para identificar habilidades que podría agregar",
+                     "",
+                     "Un editor de currículum visual con arrastrar y soltar",
+                     "Comentarios sobre cómo mejorar cada sección",
+                     "Opciones para personalizar la tipografía y los colores",
+                     "Feedback inmediato sobre la relevancia de mi currículum",
+                     "Generación de ejemplos de logros específicos para cada trabajo",
+                     "Acceso a ejemplos de currículums exitosos",
+                     "Pistas sobre cómo priorizar mis habilidades principales",
+                     "Indicadores de cuán completo está mi currículum",
+                     "",
+                     "Un diseño limpio y profesional por defecto",
+                     "Integración con servicios de búsqueda de empleo",
+                     "Un área para guardar logros y certificados importantes",
+                     "Opciones para destacar mis habilidades blandas",
+                     "Compatibilidad con diferentes dispositivos",
+                     "Un sistema para comparar mis habilidades con las de otros candidatos",
+                     "",
+                     "Un analizador de tendencias del mercado laboral",
+                     "Una sección especial para proyectos personales",
+                     "",
+                     "Un espacio para incluir referencias de manera estructurada",
+                     "",
+                     "",
+                     "Opciones para exportar en múltiples formatos como PDF o Word",
+                     "Indicaciones sobre qué habilidades mejorar",
+                     "Capacidad para importar datos desde plataformas como Google Docs",
+                     "",
+                     "Sugerencias de acción en caso de vacíos laborales",
+                     "Un generador automático de resúmenes profesionales",
+                     "Opciones para agregar habilidades técnicas y blandas",
+                     "Un medidor de impacto del currículum en sistemas ATS",
+                     "",
+                     "Un espacio para notas personales sobre cada postulación",
+                     "Comparación visual de currículums anteriores",
+                     "Pautas sobre cómo describir logros cuantitativos",
+                     "Opciones para adaptar currículums a diferentes idiomas",
+                     "Acceso a plantillas optimizadas para diferentes niveles de experiencia",
+                     "Un sistema de respaldo automático de versiones previas",
+                     "Opciones de diseño creativo para destacar",
+                     "",
+                     "Ayuda para redactar logros en diferentes estilos de escritura",
+                     "Un sistema para priorizar habilidades basadas en la oferta",
+                     "Análisis de qué sección del currículum es más relevante",
+                     "Una funcionalidad para agregar logros específicos por rol",
+                     "Compatibilidad con sistemas ATS más populares",
+                     "",
+                     "Un simulador para previsualizar cómo los reclutadores verían mi currículum",
+                     "Herramientas para organizar habilidades por categorías",
+                     "Acceso a métricas de comparación con otros usuarios",
+                     "",
+                     "Un diseño básico que pueda personalizarse fácilmente",
+                     "Un validador de información redundante",
+                     "Opciones para agregar íconos visuales en el diseño",
+                     "Un analizador de impacto de palabras clave específicas",
+                     "Consejos para ajustar el tono del currículum según la industria",
+                     "",
+                     "Indicaciones sobre cómo adaptar mi currículum al rol deseado",
+                     "Pautas para escribir resúmenes claros y concisos",
+                     "Herramientas para personalizar encabezados de secciones",
+                     "Un visualizador que muestre el orden cronológico correcto",
+                     "",
+                     "Capacidades para incluir testimonios o referencias breves",
+                     "Un tutorial de inicio rápido sobre cómo optimizar un currículum",
+                     "Un sistema para ajustar el diseño con un solo clic",
+                     "Feedback directo basado en la oferta de trabajo analizada",
+                     "",
+                     "Revisión de formato para evitar errores comunes",
+                     "Opciones para agregar certificados profesionales",
+                     "Un asistente para incluir detalles técnicos complejos",
+                     "Evaluación rápida de áreas de mejora",
+                     "",
+                     "Compatibilidad con plataformas de empleo internacionales",
+                     "Un analizador de tendencias de palabras clave por sector",
+                     "",
+                     "",
+                     "Recomendaciones automáticas sobre cómo destacar proyectos importantes",
+                     "Un sistema que sugiera nuevas secciones basadas en mi experiencia",
+                     "Indicadores visuales sobre la completitud del currículum"
+                  ]
+               }
+            ]
+         }
+      ]
    ]
-]
+}

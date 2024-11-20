@@ -1,9 +1,10 @@
+const { random } = require("lodash");
 const { chromium } = require("playwright");
 require("dotenv").config();
 
 class NavigatorService {
   navigatorLink;
-  headless = process.env.ENVIRONMENT === "dev";
+  headless = process.env.ENVIRONMENT !== "dev";
   page;
   browser;
 
@@ -18,11 +19,17 @@ class NavigatorService {
     this.browser = await chromium.launch({
       headless: this.headless,
       slowMo: 100,
+      args: [
+        "--window-size=1000,600", // Set the window size (width, height)
+        `--window-position=${random(0, 1200)},${random(0, 800)}`, // Set the window position (x, y)
+      ],
     });
     this.page = await this.browser.newPage();
   };
   closePage = async () => {
     if (this.page) await this.page.close();
+  };
+  closeBrowser = async () => {
     if (this.browser) await this.browser.close(); // Close the browser properly
   };
   goToPage = async () => {
@@ -46,6 +53,11 @@ class NavigatorService {
         inline: "center",
       });
     });
+  };
+
+  // Browser actions
+  reloadPage = async () => {
+    await this.page.reload();
   };
 
   // Form filling
