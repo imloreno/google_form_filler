@@ -19,7 +19,7 @@ ENVIRONMENT=dev         # In case you wanna debug the navigator
 
 You need to configure the JSON file as per your questions
 
-```json
+```javascript
 {
   "loop": 10, // The number of iterations per thread
   "pages": [
