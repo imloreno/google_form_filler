@@ -1,6 +1,7 @@
 # Google form solver 🔥
 
 Based on a JSON configuration file file, filling a google form automatically, running tasks in parallel
+<img src="https://github.com/imloreno/google_form_filler/blob/main/src/assets/google%20form%20filler%20banner.png" width="900" />
 
 ## Setting up
 
@@ -19,7 +20,7 @@ ENVIRONMENT=dev         # In case you wanna debug the navigator
 
 You need to configure the JSON file as per your questions
 
-```json
+```javascript
 {
   "loop": 10, // The number of iterations per thread
   "pages": [
