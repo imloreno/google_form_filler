@@ -1,5 +1,5 @@
 const { FileParser } = require("./src/services/FileParser");
-const { GoogleForm } = require("./src/services/GoogleForm");
+const { NavigatorService } = require("./src/services/NavigatorService");
 const { QuestionService } = require("./src/services/QuestionService");
 
 const main = async () => {
@@ -19,11 +19,11 @@ const main = async () => {
   const questionService = new QuestionService(questionPages);
 
   // Open the form
-  const googleForm = new GoogleForm(formLink);
-  await googleForm.openPage();
-  await googleForm.goToForm();
-  await googleForm.waitForPageIsLoaded();
-  await googleForm.waitForTimeout(100);
+  const navigatorService = new NavigatorService(formLink);
+  await navigatorService.openPage();
+  await navigatorService.goToForm();
+  await navigatorService.waitForPageIsLoaded();
+  await navigatorService.waitForTimeout(100);
 
   // Loop through the pages and interact with the form
   for (let i = 0; i < questionService.getPages().length; i++) {
@@ -32,27 +32,27 @@ const main = async () => {
       let answer = question.processAnswer();
       switch (question.getType()) {
         case "radio":
-          await googleForm.click(answer.identifier);
+          await navigatorService.click(answer.identifier);
           break;
         case "text":
-          await googleForm.fillInput(answer.identifier, answer.value);
+          await navigatorService.fillInput(answer.identifier, answer.value);
           break;
         default:
           console.log("Invalid question type");
           break;
       }
-      await googleForm.waitForTimeout(500);
+      await navigatorService.waitForTimeout(500);
     }
 
     //Set the next page
     if (questionService.nextPage()) {
-      await googleForm.click("span.l4V7wb.Fxmcue >> text=Siguiente");
-      await googleForm.waitForTimeout(1000);
+      await navigatorService.click("span.l4V7wb.Fxmcue >> text=Siguiente");
+      await navigatorService.waitForTimeout(1000);
       console.log("Going to the next page");
     } else {
-      await googleForm.click("span.l4V7wb.Fxmcue >> text=Enviar");
-      await googleForm.waitForTimeout(1000);
-      await googleForm.closePage();
+      await navigatorService.click("span.l4V7wb.Fxmcue >> text=Enviar");
+      await navigatorService.waitForTimeout(1000);
+      await navigatorService.closePage();
       console.log("Finished filling the form");
       break;
     }

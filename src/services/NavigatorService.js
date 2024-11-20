@@ -2,7 +2,7 @@ const { delay } = require("lodash");
 const { chromium } = require("playwright");
 require("dotenv").config();
 
-class GoogleForm {
+class NavigatorService {
   formLink;
   headless = process.env.PWDEBUG !== "1";
   page;
@@ -71,4 +71,4 @@ class GoogleForm {
   };
 }
 
-exports.GoogleForm = GoogleForm;
+exports.NavigatorService = NavigatorService;
