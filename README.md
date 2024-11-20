@@ -1,6 +1,7 @@
 # Google form solver 🔥
 
 Based on a JSON configuration file file, filling a google form automatically, running tasks in parallel
+<img src="![Screenshot - Google form Filler]()" width="900" />
 
 ## Setting up
 
