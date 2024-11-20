@@ -1,16 +1,14 @@
-const { delay } = require("lodash");
 const { chromium } = require("playwright");
 require("dotenv").config();
 
 class NavigatorService {
-  formLink;
-  headless = process.env.PWDEBUG !== "1";
+  navigatorLink;
+  headless = process.env.ENVIRONMENT === "dev";
   page;
   browser;
 
-  constructor(formLink) {
-    this.formLink = formLink;
-    this.headless = process.env.PWDEBUG !== "1";
+  constructor(navigatorLink) {
+    this.navigatorLink = navigatorLink;
     this.browser = null; // Store the browser instance
     this.page = null; // Store the page instance
   }
@@ -27,8 +25,8 @@ class NavigatorService {
     if (this.page) await this.page.close();
     if (this.browser) await this.browser.close(); // Close the browser properly
   };
-  goToForm = async () => {
-    await this.page.goto(this.formLink);
+  goToPage = async () => {
+    await this.page.goto(this.navigatorLink);
   };
   waitForTimeout = async (time) => {
     await this.page.waitForTimeout(time);
@@ -63,11 +61,11 @@ class NavigatorService {
   };
 
   // Getters and setters
-  getFormLink = () => {
-    return this.formLink;
+  getNavigatorLink = () => {
+    return this.navigatorLink;
   };
-  setFormLink = (formLink) => {
-    this.formLink = formLink;
+  setNavigatorLink = (navigatorLink) => {
+    this.navigatorLink = navigatorLink;
   };
 }
 

@@ -21,7 +21,7 @@ const main = async () => {
   // Open the form
   const navigatorService = new NavigatorService(formLink);
   await navigatorService.openPage();
-  await navigatorService.goToForm();
+  await navigatorService.goToPage();
   await navigatorService.waitForPageIsLoaded();
   await navigatorService.waitForTimeout(100);
 
