@@ -23,11 +23,8 @@ if (isMainThread) {
 } else {
   (async () => {
     // Configuration variables
-    const formLink = "https://forms.gle/DiLrov3NLC8uDK5J7";
-    // const formLink = "https://forms.gle/5JuGBYZzYkWhe7vG9";
-    const filePath =
-      "E:/Programming/nodejs/tests/google_form_filler/src/assets/formQuestions.json";
-    // "E:/Programming/nodejs/tests/google_form_filler/src/assets/formTest.json";
+    const formLink = "<your Google form link here>";
+    const filePath = "<The absolute path of your configuration.json file here>";
 
     // Google form service
     const googleFormService = new GoogleFormService(formLink, filePath);
